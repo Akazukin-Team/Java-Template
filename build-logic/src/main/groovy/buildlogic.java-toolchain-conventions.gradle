@@ -3,7 +3,7 @@ plugins {
     id 'com.github.ben-manes.versions'
 }
 
-def javaVersion = properties.getOrDefault('java.version', 8) as int
+def javaVersion = properties.getOrDefault('java.version', 21) as int
 def javaCompatSource = properties.getOrDefault('java.compatibility.source', javaVersion) as int
 def javaCompatTarget = properties.getOrDefault('java.compatibility.target', javaCompatSource) as int
 

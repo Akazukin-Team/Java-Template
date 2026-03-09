@@ -16,7 +16,7 @@ on:
 
 
 env:
-  JDK_VERSION: 24
+  JDK_VERSION: 25
 
 
 jobs:

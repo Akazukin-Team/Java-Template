@@ -7,4 +7,5 @@ plugins {
 }
 
 rootProject.name = '<PLACEHOLDER_NAME>'
+
 include()

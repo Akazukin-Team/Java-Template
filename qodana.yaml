@@ -3,6 +3,6 @@ version: "1.0"
 profile:
   name: qodana.recommended
 
-projectJDK: "8"
+projectJDK: "21"
 
 linter: jetbrains/qodana-jvm:latest

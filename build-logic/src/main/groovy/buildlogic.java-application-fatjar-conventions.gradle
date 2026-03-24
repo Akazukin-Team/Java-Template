@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+configurations {
+    libFatjar
+    compileClasspath.extendsFrom(libFatjar)
+    runtimeClasspath.extendsFrom(libFatjar)
+
+    appFatjar
+    compileClasspath.extendsFrom(appFatjar)
+    runtimeClasspath.extendsFrom(appFatjar)
+    api.extendsFrom(appFatjar)
+}
+
+tasks.register('shadowJar', Jar) {
+    archiveClassifier = 'all'
+    from sourceSets.main.output
+
+    from {
+        configurations.libFatjar.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    from {
+        configurations.appFatjar.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+tasks.shadowJar.mustRunAfter jar
+
+tasks.named('build') {
+    dependsOn shadowJar
+}

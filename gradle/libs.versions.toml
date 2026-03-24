@@ -5,7 +5,7 @@ jetbrains-annotation = "26.1.0"
 slf4j = "2.1.0-alpha1"
 
 # Database deps
-doma = "3.11.3"
+doma = "3.12.0"
 
 # JMH Libraries
 jmh-lib = "1.37"
@@ -13,7 +13,8 @@ jmh-lib = "1.37"
 #Gradle Plugin
 gradle-versions = "0.52.0"
 jmh-pl = "0.7.3"
-doma-plugin = "3.0.0"
+doma-compile = "4.0.3"
+doma-codegen = "3.2.1"
 graalvm = "0.11.5"
 runTask = "2.2.3"
 
@@ -36,7 +37,7 @@ jmh-bytecode = { module = "org.openjdk.jmh:jmh-generator-bytecode", version.ref 
 #Gradle Plugin
 gradle-versions = { module = "com.github.ben-manes:gradle-versions-plugin", version.ref = "gradle-versions" }
 jmh-pl = { module = "me.champeau.jmh:me.champeau.jmh.gradle.plugin", version.ref = "jmh-pl" }
-doma-compile = { module = "org.domaframework.doma.compile:org.domaframework.doma.compile.gradle.plugin", version.ref = "doma-plugin" }
-doma-codegen = { module = "org.domaframework.doma.codegen:org.domaframework.doma.codegen.gradle.plugin", version.ref = "doma-plugin" }
+doma-compile = { module = "org.domaframework.doma.compile:org.domaframework.doma.compile.gradle.plugin", version.ref = "doma-compile" }
+doma-codegen = { module = "org.domaframework.doma.codegen:org.domaframework.doma.codegen.gradle.plugin", version.ref = "doma-codegen" }
 graalvm = { module = "org.graalvm.buildtools.native:org.graalvm.buildtools.native.gradle.plugin", version.ref = "graalvm" }
 runTask = { module = "xyz.jpenilla:run-task", version.ref = "runTask" }

@@ -1,6 +1,7 @@
 plugins {
     id 'buildlogic.java-common-conventions'
     id 'buildlogic.java-application-conventions'
+    id 'buildlogic.java-application-fatjar-conventions'
     id 'buildlogic.java-library-fatjar-conventions'
     id 'buildlogic.java-library-classpath-conventions'
     id 'buildlogic.java-manifest-conventions'

@@ -17,20 +17,24 @@ dependencies {
 }
 
 jmh {
-    iterations = 10
+    warmupIterations = 5
+    iterations = 8
+    fork = 3
+
+    warmup = '5s'
+    warmupBatchSize = 1
+    warmupForks = 0
+
     batchSize = 1
-    fork = 1
+    threads = 1
+    jmhTimeout = '20s'
+
     failOnError = true
     forceGC = true
-    resultFormat = 'CSV'
-    threads = 4
-    jmhTimeout = '1m'
-    timeUnit = 'ns'
 
-    warmup = '10s'
-    warmupBatchSize = 10
-    warmupForks = 0
-    warmupIterations = 1
+    resultFormat = 'CSV'
+    timeUnit = 'ms'
+    benchmarkMode = ['avgt']
 
     jvmArgs.addAll(['-Xms512M', '-Xmx2G',
                     '-server',
